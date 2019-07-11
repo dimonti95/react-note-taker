@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './note.css';
 
 class Note extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class Note extends Component {
   renderNormal() {
     return(
       <div>
-        <div> {this.props.children} </div>
+        <div className="Note-text"> {this.props.children} </div>
         <button onClick={this.edit}> Edit </button>
         <button onClick={this.remove}> Remove </button>
       </div>
