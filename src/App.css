@@ -23,6 +23,16 @@
   color: #61dafb;
 }
 
+.Add-note-button {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.App-note-div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

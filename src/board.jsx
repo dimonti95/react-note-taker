@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Note from '../src/note';
+import './App.css';
 
 class Board extends Component {
   constructor(props) {
@@ -37,19 +38,19 @@ class Board extends Component {
 
   renderNotes(text, i) {
     return (
-      <Note key={i} index={i} removeNote={this.removeNote} updateNote={this.updateNote}>
-        {text}
-      </Note>
+      <div className="App-note-div" key={i}>
+        <Note key={i} index={i} removeNote={this.removeNote} updateNote={this.updateNote}>
+          {text}
+        </Note>
+      </div>
     );
   }
 
   render() {
     return(
       <div>
-        <button onClick={this.addNote.bind(null, "Sample note")}> New Note </button> 
-        <div>
-          {this.state.notes.map(this.renderNotes, this)}
-        </div>
+        <button className="Add-note-button" onClick={this.addNote.bind(null, "Sample note")}> New Note </button> 
+        {this.state.notes.map(this.renderNotes, this)}
       </div>
     );
   }
